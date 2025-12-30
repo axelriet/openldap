@@ -290,11 +290,11 @@ typedef void (MDB_rel_func)(MDB_val *item, void *oldptr, void *newptr, void *rel
 	/** read only */
 #define MDB_RDONLY		0x20000
 	/** don't fsync metapage after commit */
-#define MDB_NOMETASYNC		0x40000
+#define MDB_NOMETASYNC	0x40000
 	/** use writable mmap */
-#define MDB_WRITEMAP		0x80000
+#define MDB_WRITEMAP	0x80000
 	/** use asynchronous msync when #MDB_WRITEMAP is used */
-#define MDB_MAPASYNC		0x100000
+#define MDB_MAPASYNC	0x100000
 	/** tie reader locktable slots to #MDB_txn objects instead of to threads */
 #define MDB_NOTLS		0x200000
 	/** don't do any locking, caller must manage their own locks */
@@ -303,6 +303,8 @@ typedef void (MDB_rel_func)(MDB_val *item, void *oldptr, void *newptr, void *rel
 #define MDB_NORDAHEAD	0x800000
 	/** don't initialize malloc'd memory before writing to datafile */
 #define MDB_NOMEMINIT	0x1000000
+	/** store the lock file as an NTFS stream within the main data file */
+#define MDB_NTFSSTREAM	0x2000000
 /** @} */
 
 /**	@defgroup	mdb_dbi_open	Database Flags
