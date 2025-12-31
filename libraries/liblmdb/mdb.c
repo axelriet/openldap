@@ -297,6 +297,9 @@ typedef SSIZE_T	ssize_t;
 #ifdef _WIN32
 #define MDB_USE_HASH	1
 #define MDB_PIDLOCK	0
+#ifndef MDB_BUGCHECK
+#define MDB_BUGCHECK 0
+#endif
 #define THREAD_RET	DWORD
 #define pthread_t	HANDLE
 #define pthread_mutex_t	HANDLE
