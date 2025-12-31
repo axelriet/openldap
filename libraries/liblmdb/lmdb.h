@@ -305,6 +305,8 @@ typedef void (MDB_rel_func)(MDB_val *item, void *oldptr, void *newptr, void *rel
 #define MDB_NOMEMINIT	0x1000000
 	/** store the lock file as an NTFS stream within the main data file */
 #define MDB_NTFSSTREAM	0x2000000
+	/** Use a sparse file for the main data file */
+#define MDB_NTFSSPARSE	0x4000000
 /** @} */
 
 /**	@defgroup	mdb_dbi_open	Database Flags
